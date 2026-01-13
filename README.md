@@ -71,7 +71,7 @@ Dataset/
         ├── image_01.bmp
         ├── image_02.bmp
         └── ...
-
+```
 Images: RGB satellite imagery.
 
 Labels: Grayscale masks where pixel value > 0 indicates a solar panel.
