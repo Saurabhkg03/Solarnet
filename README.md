@@ -71,7 +71,7 @@ Dataset/
         ├── image_01.bmp
         ├── image_02.bmp
         └── ...
-```````markdown
+```
 ## Dataset Description
 
 **Images:** RGB satellite imagery  
