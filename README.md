@@ -71,3 +71,52 @@ Dataset/
         ├── image_01.bmp
         ├── image_02.bmp
         └── ...
+
+Images: RGB satellite imagery.
+
+Labels: Grayscale masks where pixel value > 0 indicates a solar panel.
+
+🚀 Getting Started
+Prerequisites
+Ensure you have Python installed along with the required libraries.
+
+Installation
+Clone the repository
+
+Bash
+
+git clone [https://github.com/yourusername/solarnet.git](https://github.com/yourusername/solarnet.git)
+cd solarnet
+Install Dependencies
+
+Bash
+
+pip install torch tensorflow segmentation-models-pytorch opencv-python matplotlib scikit-learn
+Usage
+Open the Notebooks: You can run the experiments directly in Jupyter Notebook or Google Colab.
+
+UNET_Solar.ipynb for the TensorFlow U-Net implementation.
+
+Solar_PSPNet.ipynb for the PyTorch PSPNet implementation.
+
+Configure Paths: Update the root_path or IMAGE_DIR variables in the notebook to point to your local dataset location.
+
+Python
+
+# Example
+train_image_dir = './Dataset/Solar/images'
+train_mask_dir  = './Dataset/Solar/labels'
+Train: Run the training cells. The models will automatically resize images to 256x256 and begin training.
+
+U-Net saves the best model as best_unet_model.h5.
+
+PSPNet uses BCEWithLogitsLoss and the Adam optimizer.
+
+📊 Results
+The notebooks include visualization blocks that display:
+
+Input Image: The raw satellite photo.
+
+Ground Truth: The actual location of solar panels.
+
+Prediction: The model's segmentation output.
